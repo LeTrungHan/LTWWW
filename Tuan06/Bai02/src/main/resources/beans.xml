@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+          http://www.springframework.org/schema/beans
+          https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean cho Address -->
+    <bean id="addressBean" class="iuh.fit.se.Address">
+        <constructor-arg value="Ho Chi Minh" />
+        <constructor-arg value="District 10" />
+        <constructor-arg value="Vietnam" />
+    </bean>
+
+    <!-- Bean cho Employee -->
+    <bean id="employeeBean" class="iuh.fit.se.Employee">
+        <property name="id" value="1001" />
+        <property name="name" value="Le Trung Han" />
+        <property name="address" ref="addressBean" />
+    </bean>
+
+</beans>
