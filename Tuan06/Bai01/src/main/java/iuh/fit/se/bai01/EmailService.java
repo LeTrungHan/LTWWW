@@ -1,4 +1,4 @@
-package iuh.fit.se.baitap01.di;
+package iuh.fit.se.bai01;
 
 // Class gui email
 public class EmailService implements MessageService {

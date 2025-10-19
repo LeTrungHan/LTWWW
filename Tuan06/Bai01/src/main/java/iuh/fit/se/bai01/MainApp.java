@@ -1,4 +1,4 @@
-package iuh.fit.se.baitap01.di;
+package iuh.fit.se.bai01;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

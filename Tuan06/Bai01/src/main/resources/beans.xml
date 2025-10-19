@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="emailService" class="iuh.fit.se.bai01.EmailService">
+        <constructor-arg name="smtpServer" value="smtp.company.com"/>
+        <constructor-arg name="port" value="465"/>
+    </bean>
+
+    <bean id="smsService" class="iuh.fit.se.bai01.SMSService">
+        <constructor-arg name="provider" value="Twilio"/>
+        <constructor-arg name="apiKey" value="twilio-key-123"/>
+    </bean>
+
+    <bean id="emailNotificationManager" class="iuh.fit.se.bai01.NotificationManager">
+        <constructor-arg name="messageService" ref="emailService"/>
+        <constructor-arg name="managerName" value="Email Manager"/>
+    </bean>
+
+    <bean id="flexibleNotificationManager" class="iuh.fit.se.bai01.NotificationManager">
+        <property name="messageService" ref="emailService"/>
+        <property name="managerName" value="Flexible Manager"/>
+    </bean>
+
+</beans>
