@@ -23,7 +23,7 @@ public class Khoa {
         this.moTa = moTa;
     }
 
-    public int getMaKhoa() {
+    public String getMaKhoa() {
         return maKhoa;
     }
 

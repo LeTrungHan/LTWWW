@@ -1,5 +1,6 @@
 package iuh.fit.se.ongk.entity;
 
+
 import java.util.Date;
 
 public class BenhNhan {
@@ -37,7 +38,7 @@ public class BenhNhan {
         this.hoTen = hoTen;
     }
 
-    public java.sql.Date getNgayNhapVien() {
+    public Date getNgayNhapVien() {
         return ngayNhapVien;
     }
 

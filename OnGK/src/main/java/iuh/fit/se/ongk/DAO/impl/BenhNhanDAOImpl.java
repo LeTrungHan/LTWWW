@@ -5,10 +5,7 @@ import iuh.fit.se.ongk.entity.BenhNhan;
 import iuh.fit.se.ongk.entity.Khoa;
 import iuh.fit.se.ongk.utils.DBConnection;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -90,9 +87,9 @@ public class BenhNhanDAOImpl implements BenhNhanDAO {
 
 
             ps.setString(1, benhNhan.getHoTen());
-            ps.setDate(2, benhNhan.getNgayNhapVien());
+            ps.setDate(2, new Date(benhNhan.getNgayNhapVien().getTime()));
             ps.setString(3, benhNhan.getChuanDoan());
-            ps.setInt(4, benhNhan.getKhoa().getMaKhoa());
+            ps.setString(4, benhNhan.getKhoa().getMaKhoa());
 
             return ps.executeUpdate() > 0;
 
